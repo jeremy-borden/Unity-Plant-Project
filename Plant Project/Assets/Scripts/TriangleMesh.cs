@@ -1,13 +1,13 @@
 using UnityEngine;
 [ExecuteInEditMode]
-[RequireComponent(typeof(MeshFilter))]
+[RequireComponent( typeof( MeshFilter ) )]
 public class TriangleMesh : MonoBehaviour
 {
     Mesh mesh;
 
     Vector3[] verticies;
     int[] triangles;
-    void Start()
+    void Start ()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
@@ -16,12 +16,12 @@ public class TriangleMesh : MonoBehaviour
         UpdateMesh();
     }
 
-    void Update()
+    void Update ()
     {
 
     }
 
-    void CreateTri()
+    void CreateTri ()
     {
         verticies = new Vector3[]{
             new Vector3(0,0,0),
@@ -36,7 +36,7 @@ public class TriangleMesh : MonoBehaviour
         };
     }
 
-    void UpdateMesh()
+    void UpdateMesh ()
     {
         mesh.Clear();
         mesh.vertices = verticies;
